@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Kitchen Treats</title>
+    <link rel="icon" type="image/x-icon" href="./M bakeryLogo.png">
+</head>
+
+<style>
+    body {
+        margin: 0px;
+        background-color: #2a1b18;
+        font-family: times new roman;
+    }
+
+    .navbar1 {
+        background-image: url(./chocoltebg.jpg);
+        background-position-y: -70px;
+    }
+
+    .navbar {
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        justify-content: center;
+        display: flex;
+        gap: 30px;
+        color: #e6d7ce;
+    }
+
+    .title {
+        margin: 20px;
+        font-family: times new roman;
+        color: #e6d7ce;
+        
+    }
+
+    .logo {
+        margin-top: 15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+    }
+
+    .btns {
+        height: 30px;
+        border-radius: 5px;
+        font-size: 10px;
+        margin-top: 20px;
+        font-family: times new roman;
+        padding: 5px;
+        border: none;
+        transition-duration: 0.5s;
+        color: #e6d7ce;
+        background-color: #dedede00;
+    }
+
+    .btns:hover {
+        color: white;
+        border-radius: 10px;
+        box-shadow: #e6d7ce 0 0 10px,
+            #e6d7ce 0 0 10px,
+            #e6d7ce 0 0 10px,
+            #e6d7ce 0 0 10px;
+        background-color: #2a1b18;
+        transition: 0.1s ease;
+        transform: scale(1.1);
+    }
+
+    .homepage {
+        background-image: url(./chocobllsbg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .home {
+        padding: 105px;
+        color: #e6d7ce;
+        text-align: left;
+        font-size: 25px;
+        margin-left: 70px;
+    }
+
+    .btn {
+        border-radius: 5px;
+        font-size: 10px;
+        font-family: times new roman;
+        padding: 5px;
+        border: none;
+        transition-duration: 0.5s;
+        color: #e6d7ce;
+        background-color: #dedede00;
+    }
+
+    .btn:hover {
+        color: white;
+        border-radius: 10px;
+        box-shadow: #e6d7ce 0px 0 10px;
+        background-color: #2a1b18;
+        transition: 0.1s ease;
+        transform: scale(1.3);
+    }
+
+    .bgabt {
+        padding: 28px;
+        background-color: #f6cfb1;
+    }
+
+    .AbtUsbg {
+        box-shadow: #2a1b18 0 0 10px;
+        margin: 20px;
+        border-radius: 10px;
+        background: url(./abtusbgpic.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .content {
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        text-align: center;
+        color: #e6d7ce;
+        padding: 20px;
+        font-size: 13px;
+        text-shadow: #e6d7ce 0 0 5px;
+    }
+
+    .checkbtn {
+        margin: 30px;
+        box-shadow: #e6d7ce 0 0 5px;
+        border-radius: 10px;
+        border: none;
+        font-size: 10px;
+        font-family: times new roman;
+        color: #e6d7ce;
+        background-color: #e6d7ce00;
+        padding: 5px;
+        transition-duration: 0.5s;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .checkbtn:hover {
+        background-color: #2a1b18b8;
+        color: #ffffff;
+        box-shadow: #e6d7ce 0 0 10px;
+        transition: 0.1s ease;
+        transform: scale(1.3);
+    }
+
+    .shopbgcolor {
+        padding: 28px;
+        background-color: #2a1b18;
+    }
+
+    .shopbgpic {
+        margin-top: 5px;
+        border: #2a1b18 3px;
+        border-style: groove;
+        background-image: url(./shopbgpic.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        box-shadow: #e6d7ce 0 0 10px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        color: #2a1b18;
+        text-align: center;
+    }
+
+    .shopcontainer {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .shopboxes {
+        border-radius: 10px;
+        background-color: #2a1b1800;
+        height: 200px;
+        margin: 25px;
+        padding: 30px;
+        width: 200px;
+        box-shadow: #2a1b18 0 0 10px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .shopimgs {
+        width: 200px;
+        height: 160px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        box-shadow: #e6d7ce 0 0 10px;
+    }
+
+    .shopname {
+        font-size: 10px;
+        text-align: center;
+        color: #2a1b18;
+    }
+
+    .shopbtn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buybtn {
+        font-size: 10px;
+        font-family: times new roman;
+        border: none;
+        background-color: #2a1b1800;
+        box-shadow: #e6d7ce 0 0 10px;
+        border-radius: 3px;
+        color: #ffffff;
+        padding: 3px;
+        width: 50px;
+        transition-duration: 0.5s;
+    }
+
+    .buybtn:hover {
+        box-shadow: #2a1b18 0 0 10px;
+        transition: 0.1s ease;
+        transform: scale(1.3);
+    }
+
+    .contactbgpic {
+        background-position-y: -150px;
+        background-image: url(./contactbgpic.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 40px;
+    }
+
+    .contactbgblur {
+        box-shadow: #e6d7ce 0 0 10px;
+        border-radius: 20px;
+        padding: 20px;
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(100px);
+    }
+
+    .contactbox {
+        padding-bottom: 30px;
+        text-align: center;
+        color: #e6d7ce;
+        text-shadow: #e6d7ce 0 0 10px;
+    }
+
+    .contact {
+        height: 30px;
+        text-align: center;
+        color: #e6d7ce;
+    }
+
+    .contactlayouts {
+        text-align: center;
+        gap: 15px;
+        font-size: 15px;
+        color: #e6d7ce;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gmailpic {
+        box-shadow: #e6d7ce 0 0 10px;
+        border-radius: 100px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .fbpic {
+        box-shadow: #e6d7ce 0 0 10px;
+        border-radius: 100px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .prdctbg {
+        background-color: #f6cfb1;
+        margin: 0;
+        padding: 18px;
+    }
+
+    .prdctbgpic {
+        border-radius: 20px;
+        padding: 60px;
+        background-image: url(./prdctbgpic.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-style: double;
+        border-color: #2a1b18;
+        box-shadow: #2a1b18 0 0 10px,
+            #2a1b18 0 0 10px;
+        backdrop-filter: blur(20px);
+
+    }
+
+    .prdct-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .prdct-imgs {
+        width: 250px;
+        height: 200px;
+        margin: 15px;
+        border-radius: 20px;
+        border-style: groove;
+        border-color: #2a1b18;
+    }
+
+    strong{
+        font-size: 25px;
+    }
+    @media (max-w) {
+        
+    }
+
+.text{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.text{
+
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.box2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+</style>
+
+<body> <!--Homepage Navigation kineme-->
+    <div class="homepage">
+        <div class="navbar1">
+            <div class="navbar">
+                <img src="./FusionLogo.jpg" class="logo">
+                <h2 class="title">Fusion Kitchen Treats</h2>
+                <a href="#home">
+                <button class="btns">Home</button>
+                </a>
+                <a href="#aboutus">
+                <button class="btns">About</button>
+                </a>
+                <a href="#shop">
+                <button class="btns">Shop</button>
+                </a>
+                <a href="#product">
+                <button class="btns">Products</button>
+                </a>
+                <a href="#contact">
+                <button class="btns">Contact</button>
+                </a>
+            </div>
+        </div>
+        <div class="home" id="home">
+            <h1>Welcome to Fusion Kitchen Treat!</h1>
+            <h3>Explore and taste treats made just for you</h3>
+        </div>
+    </div>
+
+    <div class="bgabt" id="aboutus"> <!--About Us kineme kineme-->
+        <div class="AbtUsbg">
+            <div class="content">
+                <h1>About Us</h1>
+                <p>
+                    Fusion Kitchen Treats is a food business that offers unique handcrafted snacks to satisfy every
+                    customer's cravings.<br>
+                    Our brand stands out because of its one-of-a-kind flavors and high-quality small-batch
+                    production.<br>
+                    Overall, Fusion Kitchen Treats provides a fun and satisfying dessert experience.<br>
+                </p>
+
+                <div class="checkprdcts">
+                    <a href="#shop">
+                    <button class="checkbtn">Check Products</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shopbgcolor" id="shop"> <!--Shop kineme kineme-->
+        <div class="shopbgpic">
+            <h2>Try Our Products!</h2>
+            <div class="shopcontainer">
+
+                <div class="shopboxes">
+                    <img src="./mallowcookies2.jpg" class="shopimgs">
+                    <h3 class="shopname">Mango Mallow Cookies</h3>
+                    <div class="shopbtn">
+                        <button class="buybtn">₱45</button>
+                    </div>
+                </div>
+
+                <div class="shopboxes">
+                    <img src="./cassavablls2.jpg" class="shopimgs">
+                    <h3 class="shopname">Cassava Cheese Balls</h3>
+                    <div class="shopbtn">
+                        <button class="buybtn">₱35</button>
+                    </div>
+                </div>
+
+                <div class="shopboxes">
+                    <img src="./chococubes2.jpg" class="shopimgs">
+                    <h3 class="shopname">Tater Choco Cubes</h3>
+                    <div class="shopbtn">
+                        <button class="buybtn">₱30</button>
+                    </div>
+                </div>"
+            </div>
+        </div>
+    </div>
+
+    <div class="prdctbg" id="product"> <!--Product descrpt kineme kineme-->
+        <div class="prdctbgpic">
+            <div class="prdct-content">
+                <div class="box2">
+                <img src="./mallowcookies2.jpg" class="prdct-imgs" id="cookies">
+
+               <div class="text">
+                <strong>Mango Mallow Cookies</strong>
+                <p>are refreshing and sweet! Buttery graham bases pair with rich cream<br>
+                    filling and bright, juicy mango-layers of texture and tropical flavors, perfectly chilled.
+                </p>
+                </div>
+            </div>
+<div class="box2">
+                <img src="./cassavablls2.jpg" class="prdct-imgs" id="balls">
+                <div class="text">
+                <strong>Cassava Cheese balls</strong>
+                 <p>are sweet and satisfying! steamed cassava is soft and chewy, with rich condensed
+                    milk flavor.<br>
+                    warm melted chocolate burst through each bite, balanced by a light cocoa dusting.
+                </p>
+                </div>
+                </div>
+
+<div class="box2">
+                <img src="./chococubes2.jpg" class="prdct-imgs" id="balls">
+                <div class="text">
+                <strong>Tater Choco Cubes</strong>
+                 <p>deliciously sweet! The crispy fried exterior has a caramel sugar taste,<br>
+                    and the inside is smooth creamy potato mixed with vanilla and condensed milk,<br>
+                    rich melted chocolate burst out with every bite-a perfect blend mixed of sweet flavors.
+                </p>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+
+    <div class="contactbgpic" id="contact"> <!--Contact kineme kineme-->
+        <div class="contactbgblur">
+            <div class="contactbox">
+                <h2 class="contact">Contact</h2>
+                <p>For more product inquiries or shopping concerns, don't hesitate to reach out on us.<br>
+                    We would like to know your feedback on our products, as well as issues.
+                </p>
+
+                <div class="contactlayouts">
+                    <div class="gmaillayout">
+                        <img src="./FusionLogo.jpg" class="gmailpic">
+                        <p class="gmail">bantilanguardiario07@gmail.com</p>
+                    </div>
+                    <div class="fblayout">
+                        <img src="./pfpownergrace.jpg" class="fbpic">
+                        <p class="fb">Grace Bantilan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
